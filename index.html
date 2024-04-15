@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- STYLE WITH BOOSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--EXTERNAL STYLE -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- INCORPORACION DE LA CARPETA INDEX.JS -->
+    <script defer src="./assets/javascript/index.js"></script>
+
+    <!-- INCORPORACION DE JQUERY AL PROYECTO -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar p-0 navbar-dark custom-bg-nav">
+        <div class="container-fluid mx-3">
+          <!-- no se porque razon no pude modificar el tamaño de fuente directamente con bootstrap, revise console y los estilos de nav-brand no me lo permite, tampoco me permite aumentarle el tamaño con un fs aparte, por lo que tomare la desicion de aplicarle estilos directo al css -->
+          <a class="navbar-brand" href="#">Ricomida</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end text-bg-dark"
+            tabindex="-1"
+            id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                Dark offcanvas
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <nav
+        class="navbar navbar-expand-md navbar-dark custom-bg-nav fixed-top second-navbar"
+      >
+        <div class="container mx-6">
+          <!-- Contenedor de la marca "Ricomida" -->
+          <div class="titulo-ricomida">
+            <a href="#">Ricomida</a>
+          </div>
+
+          <!-- Contenedor del resto del menú de navegación -->
+          <div
+            class="container justify-content-end navbar-collapse"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Receta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- inicio de la siguiente parte del proyecto, se uzara una carta para englobar la imagen -->
+
+    <section class="card mx-auto w-75 border-0 mt-4">
+      <div class="row">
+        <div class="col-md-6">
+          <hr class="w-100 mx-auto border-2 opacity-100 d-md-none" />
+
+          <img
+            src="./assets/img/principal.jpg"
+            class="card-img-top"
+            alt="imagen-principal-de-una-pizza"
+          />
+        </div>
+
+        <div
+          class="card-body col-md-6 d-flex flex-column justify-content-center text-start"
+        >
+          <h2 class="card-title fs-1 fw-bolder py-1">
+            PIZZA AL ESTILO CHICAGO CON ESPINACAS Y CHAMPIÑONES
+          </h2>
+          <hr class="w-100 mx-auto border-2 opacity-100 py-1" />
+          <p class="card-text fs-10 fw-semibold">110 MIN / 6 A 8 PORCIONES</p>
+
+          <div class="d-flex">
+            <button
+              id="enviarCorreo"
+              type="button"
+              class="btn btn-sm custom-button py-2 mx-2 border-dark opacity-75"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              data-bs-custom-class="custom-tooltip"
+              title="Presiona para enviar a tu correo"
+            >
+              Enviar por correo
+            </button>
+            <button
+              type="button"
+              class="btn btn-sm custom-button py-2 mx-2 border-dark opacity-75"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-custom-class="custom-tooltip"
+              title="Agrega esta receta a tus favoritos"
+            >
+              Añadir a favoritos
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--INICIO DE  CAROUSEL -->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide d-none d-md-block my-5"
+      >
+        <div class="carousel-indicators">
+          <div class="">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active custom-button-carousel"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+          </div>
+          <div class="">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+              class="activate custom-button-carousel"
+            ></button>
+          </div>
+        </div>
+
+        <!-- SECCIÓN DEL CAROUSEL -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-3">
+                <img
+                  src="./assets/img/slider-1.png"
+                  class="d-block img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="col-3">
+                <img
+                  src="./assets/img/slider-2.png"
+                  class="d-block img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="col-3">
+                <img
+                  src="./assets/img/slider-3.png"
+                  class="d-block img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="col-3">
+                <img
+                  src="./assets/img/slider-4.png"
+                  class="d-block img-fluid"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-3">
+                <img
+                  src="./assets/img/slider-5.png"
+                  class="d-block img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="col-3">
+                <img
+                  src="./assets/img/slider-6.png"
+                  class="d-block img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="col-3">
+                <img
+                  src="./assets/img/slider-7.png"
+                  class="d-block img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="col-3">
+                <img
+                  src="./assets/img/slider-8.png"
+                  class="d-block img-fluid"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CIERRE DE CAROUSEL -->
+    <hr class="w-75 mx-auto border-2 opacity-100" />
+
+    <!-- siguiente contenido- ingredientes -->
+    <div class="w-75 mx-auto mt-5 tipo-de-letra">
+      <div
+        class="container-fluid fw-semibold text-start custom-line-height my-5"
+      >
+        <div class="row">
+          <div class="col-md-6 d-md-block">
+            <h4><span class="border-bottom border-dark">INGREDIENTES</span></h4>
+            <p class="py-3 fs-5">Masa</p>
+            <ul class="list-unstyled">
+              <li class="my-0">20 gr de levadura seca instantánea</li>
+              <li class="my-0">
+                1 cucharadita de azúcar 500 ml agua tibia <br />100 ml aceite
+                vegetal
+              </li>
+              <li class="my-0">
+                4 cucharadas de aceite de oliva <br />65 gr harina de maíz fina
+                (chuchoca)
+              </li>
+              <li class="my-0">2 cucharaditas de sal 625 gr harina Salsa</li>
+              <br />
+              <li class="my-0">5 cucharadas de aceite de oliva</li>
+              <li class="my-0">½ cebolla picada en cubos finos</li>
+              <li class="my-0">2 cucharaditas de sal</li>
+              <li class="my-0">3 cucharadas de Orégano Gourmet</li>
+              <li class="my-0">1 ½ cucharadas de Albahaca Gourmet</li>
+              <li class="my-0">2 tarro de tomates en cubos al natural</li>
+            </ul>
+          </div>
+          <div class="col-md-6 fw-semibold">
+            <h4><span class="border-bottom border-dark">PREPARACION</span></h4>
+            <ul class="list-unstyled">
+              <li class="my-4">
+                1. Para la masa, disolver la levadura y el azúcar en agua tibia
+                en un bol grande. Dejar reposar 2 minutos. Agregar el aceite, la
+                harina de maíz, sal y 400gr de harina. Mezclar bien. Amasar y
+                agregar el resto de harina, la cantidad necesaria para tener una
+                masa blanda. Poner en el mesón y amasar por 5 minutos o hasta
+                tener una masa lisa y elástica (agregar harina en el mesón a
+                medida que se va amasando para que la masa no se pegue). Poner
+                la masa en un bol aceitado, tapar con un paño de cocina limpio y
+                dejar reposar hasta que la masa duplique su volumen (leudar).
+                Golpear la masa para que baje y luego dejar leudar por 40
+                minutos adicionales.
+              </li>
+              <li class="my-4">
+                2. Mientras tanto, preparar la salsa: Calentar 4 cucharadas de
+                aceite en una olla a fuego medio. Agregar la cebolla, Orégano
+                Gourmet, Albahaca Gourmet, sal y cocinar hasta que la cebolla
+                esté dorada. Agregar el ajo y cocinar por 30 segundos. Agregar
+                los tomates junto al jugo del tarro, a la mezcla de cebolla.
+                Agregar el azúcar y cocinar hasta que la mezcla se haya reducido
+                y espesado, como 30 minutos. Sazonar con sal y pimienta a gusto.
+                Reservar.
+              </li>
+              <li class="my-4">
+                3. Relleno: Cocinar las chalotas en el aceite de oliva hasta que
+                estén transparentes. Agregar los champiñones y las espinacas,
+                cocinar hasta que estén cocidos y se haya evaporado todo el
+                líquido que hayan votado los vegetales. Reservar.
+              </li>
+              <li class="my-4">4. Calentar el horno a 220C.</li>
+              <li class="my-4">
+                5. Una vez que la masa haya reposado, dividirla en dos bolas.
+                Estirar cada masa para cubrir dos moldes (desmontables) de 26
+                cm, hacer un borde de 5 cm con la masa. Dividir el relleno entre
+                las dos pizzas, tapar con el queso mozarella, luego terminar con
+                la salsa de tomates y finalmente espolvorear el queso rallado.
+              </li>
+              <li class="my-4">
+                6. Hornear por 35 a 40 minutos o hasta que el relleno esté
+                caliente y la base esté esponjosa y dorada. Esperar unos minutos
+                antes de desmoldar.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="w-75 mx-auto border-2 opacity-100" />
+    <h2 class="fw-bold px-3 py-5 text-center">RECETAS RELACIONADAS</h2>
+
+    <!-- siguiente seccion 3 cartas RECETAS RELACIONADAS -->
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <div class="card mb-4">
+            <img
+              src="./assets/img/recipe-card-1.png"
+              class="card-img-top"
+              alt="recipe-1"
+            />
+            <div class="card-body">
+              <h5 class="card-title card-toggle">
+                PANQUEQUES CON MANJAR Y CREMA
+              </h5>
+              <p class="card-text card-toggle-content">
+                Mus enim elementum dignissim class eleifend justo, ut nunc
+                magnis est vulputate nostra, blandit erat luctus faucibus orci.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="card mb-4">
+            <img
+              src="./assets/img/recipe-card-2.png"
+              class="card-img-top"
+              alt="recipe-card-2"
+            />
+            <div class="card-body">
+              <h5 class="card-title card-toggle">TIRAMISÚ</h5>
+              <p class="card-text card-toggle-content">
+                Congue fermentum dignissim rhoncus elementum ac nisi, proin
+                phasellus lacinia sed faucibus mauris, taciti scelerisque nulla
+                ornare consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="card mb-4">
+            <img
+              src="./assets/img/recipe-card-3.png"
+              class="card-img-top"
+              alt="recipe-3"
+            />
+            <div class="card-body">
+              <h5 class="card-title card-toggle">PLATEADA</h5>
+              <p class="card-text card-toggle-content">
+                Cubilia elementum posuere arcu rhoncus egestas lectus, diam
+                aliquam laoreet ac eleifend risus, urna auctor inceptos mattis
+                dapibus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- cierre de seccion de las cartas -->
+
+    <!-- inicio de siguiente seccion con fondo rojo, hay que realizar un span para agregar stylos a la parte donde dice ricomida-->
+    <div class="custom-card">
+      <div class="custom-card text-center container">
+        <h2 class="fs-1 mx-2 fw-bold">SUSCRÍBETE EN NUESTRO NEWSLETTER</h2>
+        <p class="fs-4 my-4">
+          y obtén las mejores recetas que tenemos en
+          <span class="custom-ricomida">Ricomida</span>
+        </p>
+        <button type="button" class="btn btn-outline-light w-50">
+          Empezar
+        </button>
+      </div>
+    </div>
+    <!-- termino de la seccion -->
+
+    <!-- footer -->
+    <footer class="text-center p-4 text-white">
+      <span>Ricomida</span>
+    </footer>
+    <!-- termino de footer -->
+  </body>
+</html>

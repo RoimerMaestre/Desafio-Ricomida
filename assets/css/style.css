@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lobster&display=swap");
+
+/* se importo dos stylos de letras ede google fonts, esto es para el titulo del nav bar- igual se debe revisar con precaucion */
+
+.navbar-brand {
+  font-family: Lobster, Cabin;
+  font-size: 2.5rem;
+}
+/* se estara utilizando media queries para hacer que el menu de hamburguesa desaparezca y se muestre el otro menu a continuacion, sin embargo se estara revisando el comportamiento del mismo */
+
+/* Ocultar el segundo conjunto de elementos de navegación inicialmente */
+.second-navbar {
+  display: none;
+}
+.tipo-de-letra {
+  font-family: Cabin;
+  font-size: 1.1 rem;
+  color: #373a3c;
+}
+/* Mostrar el segundo conjunto de elementos de navegación en pantallas medianas y más grandes */
+@media (min-width: 768px) {
+  .second-navbar {
+    display: block;
+  }
+}
+
+.custom-bg-nav {
+  background-color: #373a3c;
+}
+
+.titulo-ricomida a {
+  text-decoration: none;
+  color: white;
+  font-family: Lobster, Cabin;
+  font-size: 2.5rem;
+}
+.custom-button {
+  font-size: 0.8rem;
+}
+
+.custom-line-height {
+  line-height: 2rem;
+  padding-right: 3rem;
+}
+
+.custom-line-height-1 {
+  line-height: 2rem;
+}
+/* en la seccion de 3 imagenes se customizara el with debido a que boostrap de manera predeterminada solo me da 3 opciones y ninguna me sirve */
+
+.custom-card {
+  background-color: #dc3545;
+  color: #ffffff;
+  border-color: #dc3545;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* se uso para cambiarle el estilo de letra a ricomida por lobster */
+.custom-ricomida {
+  font-family: Lobster;
+}
+
+footer {
+  background-color: #373a3c;
+  font-family: Lobster;
+  font-size: 2.5rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+  top: 50px;
+}
+
+.bordes {
+  border-bottom: 1px solid;
+  width: 50%;
+}
