@@ -1,2 +1,2 @@
 # Desafio Romida
-## Se realiza desafio ricomida de desafio latam
+## Prueba latam, con responsive y algo de jquery
